@@ -9,6 +9,11 @@
     <title>MAXX⚡Power &bull; Outages</title>
     <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
+    <script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+    </script>
   </head>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -24,7 +29,7 @@
         </div>
       </header>
       <br>
-      <iframe id="iframepdf" src="resources/Outage_Data.pdf" height="600" width="450" ></iframe>
+      <iframe id="iframepdf" src="resources/Outage_Data.pdf" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
       <br>
       <footer class="mastfoot mt-auto">
         <div class="inner">
